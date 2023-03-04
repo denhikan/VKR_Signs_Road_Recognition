@@ -64,7 +64,7 @@ model.add(Dense(43, activation='softmax'))
 #Связь модели с оптимизатором,функцией потерь и метриками
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-epochs = 20
+epochs = 40
 #Сохраняем историю модели обучения
 history = model.fit(X_train, y_train, batch_size=32, epochs=epochs, validation_data=(X_test, y_test))
 model.save("my_model.h5")
